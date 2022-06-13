@@ -2,14 +2,14 @@ import { useState } from 'react';
 import { useRouter } from 'next/router'
 import GoogleLogin from 'react-google-login';
 
-import { googleLogin, signupUser } from '@/actions/index.js';
+import { googleLogin, signupUser, loginUser } from '@/actions/index.js';
 import LoadingWidget from '@/components/LoadingWidget';
 import CustomToaster from '@/components/CustomToaster';
 import { validateEmail } from '@/helpers/utils.js';
 
 import { container } from './style.js';
 
-const SignupWidget = ()=>{
+const SignupWidget = ({ isLogin })=>{
     const router = useRouter();
 
     const [email, setEmail] = useState('');
@@ -53,19 +53,31 @@ const SignupWidget = ()=>{
             showToaster(false, 'Please enter valid password');
             return;
         }
-        if(password!==confirmPassword){
+        if(!isLogin && password!==confirmPassword){
             showToaster(false, "password & confirm password din't match");
             return;
         }
         setLoader(true);
-        signupUser({email, password}, (error, resp)=>{
-            setLoader(false);
-            if(resp){
-                router.push('/')
-            }else{
-                showToaster(false, 'Failed to signup Plz try after some time');
-            }
-        });
+        if(isLogin){
+            loginUser({email, password}, (error, resp)=>{
+                setLoader(false);
+                if(resp){
+                    router.push('/')
+                }else{
+                    showToaster(false, 'Failed to Login Plz try after some time');
+                }
+            });
+        }else{
+            signupUser({email, password}, (error, resp)=>{
+                setLoader(false);
+                if(resp){
+                    router.push('/')
+                }else{
+                    showToaster(false, 'Failed to signup Plz try after some time');
+                }
+            });
+        }
+        
     }
 
     const handleEnterKeyPress = (e, val)=>{
@@ -79,7 +91,12 @@ const SignupWidget = ()=>{
                     showToaster(false, 'Please enter valid email id');
                 }
             }else if(val==="confirmPassword"){
-                document.getElementById(val).focus();
+                if(isLogin){
+                    handleSubmitClick();
+                }else{
+                    document.getElementById(val).focus();
+                }
+                
             }else{
                 if(confirmPassword===password){
                     handleSubmitClick();
@@ -145,19 +162,24 @@ const SignupWidget = ()=>{
                         </div>
                         <div className="formSection">
                             <div className="inputForm">
-                                <input className="npt" type="text" value={email} onChange={handleEmailChange} onKeyPress={(e)=>handleEnterKeyPress(e,'password')}/>
+                                <input className={`npt ${email?"dataFill":""}`} type="text" value={email} onChange={handleEmailChange} onKeyPress={(e)=>handleEnterKeyPress(e,'password')} autoComplete="new-password"/>
                                 <label className={email ? '' : ''}>Email or phone number</label>
                             </div>
                             <div className="inputForm inpuBtn">
-                                <input className="npt" type={passwordVisible?"text":"password"} id="password" value={password} onChange={(e)=>handlePasswordChange(e, 'password')} onKeyPress={(e)=>handleEnterKeyPress(e, 'confirmPassword')}/>
+                                <input className={`npt ${password?"dataFill":""}`} type={passwordVisible?"text":"password"} id="password" value={password} onChange={(e)=>handlePasswordChange(e, 'password')} onKeyPress={(e)=>handleEnterKeyPress(e, 'confirmPassword')} autoComplete="new-password"/>
                                 <label>Password</label>
                                 <button onClick={()=>togglePassword('passwordVisible', !passwordVisible)}>{passwordVisible?"Hide":"Show"}</button>
                             </div>
+                            
+                            {
+                            !isLogin?
+                            <>
                             <div className="inputForm inpuBtn">
-                                <input className="npt dataFill" type={confirmPasswordVisible?"text":"password"} id="confirmPassword" value={confirmPassword} onChange={(e)=>handlePasswordChange(e, 'confirmPassword')} onKeyPress={(e)=>handleEnterKeyPress(e, '')}/>
+                                <input className={`npt ${confirmPassword?"dataFill":""}`} type={confirmPasswordVisible?"text":"password"} id="confirmPassword" value={confirmPassword} onChange={(e)=>handlePasswordChange(e, 'confirmPassword')} onKeyPress={(e)=>handleEnterKeyPress(e, '')}/>
                                 <label>Confirm Password</label>
                                 <button onClick={()=>togglePassword('confirmPasswordVisible', !confirmPasswordVisible)}>{confirmPasswordVisible?"Hide":"Show"}</button>
                             </div>
+
                             <div className="tms">
                                 <p>By clicking Agree & Join, you agree to the LinkedIn <a>User Agreement, Privacy
                                         Policy</a>, and <a>Cookie Policy</a>.
@@ -204,6 +226,14 @@ const SignupWidget = ()=>{
                                 </button>
                                 )}
                             />
+                            </>
+                            :<div className="tms">
+                                {/* <p>By clicking Agree & Join, you agree to the LinkedIn <a>User Agreement, Privacy
+                                        Policy</a>, and <a>Cookie Policy</a>.
+                                </p> */}
+                                <button className="mainBtn" onClick={handleSubmitClick}>Login</button>
+                            </div>
+                            }
                         </div>
                         <div className="outTxt">
                             <p>Looking to create a page for a business? <a>Get help</a></p>

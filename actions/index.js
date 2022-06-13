@@ -20,6 +20,8 @@ export const signupUser = (data={}, cb)=>{
         }else{
             if(cb) cb(true, null)
         }
+    }).catch(()=>{
+      if(cb) cb(true, null)     
     })
 }
 
@@ -52,3 +54,17 @@ export const googleLogin = (data, cb) => {
         if (cb) cb(message, null);
       });
   };
+
+export const loginUser = (data={}, cb)=>{
+    API_POST(`${API_END_POINT}/study/student-login`, data).then((response)=>{
+        if(response && response.status==1){
+            STORAGE.setAuthToken(response.message.token).then(() => {
+                if (cb) cb(null, response);
+              });
+        }else{
+            if(cb) cb(true, null)
+        }
+    }).catch(()=>{
+      if(cb) cb(true, null)     
+    })
+}
