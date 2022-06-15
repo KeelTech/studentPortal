@@ -163,7 +163,7 @@ const SignupWidget = ({ isLogin })=>{
                         <div className="formSection">
                             <div className="inputForm">
                                 <input className={`npt ${email?"dataFill":""}`} type="text" value={email} onChange={handleEmailChange} onKeyPress={(e)=>handleEnterKeyPress(e,'password')} autoComplete="new-password"/>
-                                <label className={email ? '' : ''}>Email or phone number</label>
+                                <label>Email or phone number</label>
                             </div>
                             <div className="inputForm inpuBtn">
                                 <input className={`npt ${password?"dataFill":""}`} type={passwordVisible?"text":"password"} id="password" value={password} onChange={(e)=>handlePasswordChange(e, 'password')} onKeyPress={(e)=>handleEnterKeyPress(e, 'confirmPassword')} autoComplete="new-password"/>
