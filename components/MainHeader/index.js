@@ -103,7 +103,7 @@ const MainHeader = ()=>{
                                     </li>
                                 </ul>
                             </div>
-                            <div class="joinBtn">
+                            <div class="joinBtn" onClick={()=>router.push('/signup')}>
                                 <button>Join Now</button>
                             </div>
                             {/* <!-- <div class="SgnIn">
