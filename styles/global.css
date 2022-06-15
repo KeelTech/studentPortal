@@ -662,7 +662,29 @@ a{
   }
 }
 
+.inputForm input.dataFill {
+  border-color: #ef4f4f;
+  box-shadow: 0 0 0 1px #ef4f4f;
+}
 
+.inputForm input:focus ~ label {
+  font-size: 12px;
+  line-height: 1.33333;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+  padding-top: 6px;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.inputForm input.dataFill ~ label {
+  font-size: 12px;
+  line-height: 1.33333;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+  padding-top: 6px;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
 .surveyPageLoader {
   position: fixed;
   background: #0000006b;
