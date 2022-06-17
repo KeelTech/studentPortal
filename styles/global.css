@@ -236,10 +236,10 @@ a{
 }
 @media (min-width: 1920px) {
   .container-fluid {
-    max-width: 80%;
+    max-width: 1128px;
   }
   .container {
-    max-width: 80%;
+    max-width: 1128px;
   }
 }
 
@@ -705,10 +705,11 @@ a{
   align-items: center;
   justify-content: space-between;
   padding: 12px 0px;
+  min-height: 80px;
 }
 
 .logoKeel img {
-  width: 145px;
+  width: 140px;
   cursor: pointer;
 }
 
@@ -954,7 +955,7 @@ a{
 }
 
 .headingLog h1 {
-  font-size: 56px;
+  font-size: 49px;
   font-weight: 300;
   color: #8f5849;
 }
@@ -1196,6 +1197,7 @@ section.connectCont {
 
 .vidBlock iframe {
   width: 100%;
+  border-radius: 12px;
 }
 
 .moviText:before {
@@ -1271,6 +1273,31 @@ footer {
   font-weight: 400;
   color: #00000099;
   font-weight: 600;
+}
+.subFooter ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 26px;
+  justify-content: center;
+}
+
+
+.subFooter img {
+  filter: grayscale(9);
+  width: 84px;
+}
+
+.subFooter {
+  background: white;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+}
+.subFooter ul li p {
+  font-size: 12px;
+  font-weight: 500;
+  color: #00000099;
 }
 /* // ========= Footer ========= */
 
@@ -1364,5 +1391,23 @@ footer {
     text-align: center;
     font-size: 33px;
   }
+  .subFooter ul {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.subFooter {
+  padding: 20px 0px;
+}
+
+.subFooter ul li {
+    width: 40%;
+}
+
+.subFooter ul li p {
+    font-size: 12px;
+    font-weight: 500;
+    color: #00000099;
+}
 }
 /* =========== media Query */

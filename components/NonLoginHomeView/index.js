@@ -1,12 +1,12 @@
 import MainHeader from '@/components/MainHeader';
 import LoginWidget from '@/components/LoginWidget';
 
-const HomeView = ({ afterLoginRedirection })=>{
+const HomeView = ({ afterLoginRedirection }) => {
 
-    return(
-        <>  
-            <MainHeader/>
-            <LoginWidget afterLoginRedirection={afterLoginRedirection}/>
+    return (
+        <>
+            <MainHeader />
+            <LoginWidget afterLoginRedirection={afterLoginRedirection} />
 
             <section class="colorSection">
                 <div class="container">
@@ -62,129 +62,148 @@ const HomeView = ({ afterLoginRedirection })=>{
                     </div>
                 </div>
             </section>
-            
+
             <section class="connectCont">
-        <div class="container">
-            <div class="connctMain">
-                <div class="row">
-                    <div class="col-md-6 col-12">
-                        <div class="contcData">
-                            <img class="img-fluid"
-                                src="https://static-exp2.licdn.com/aero-v1/sc/h/b1fxwht7hdbeusleja7ciftsj" />
-                            <div class="cntcText">
-                                <p>Connect with people who can help
-                                </p>
-                                <button>Find People You Know</button>
+                <div class="container">
+                    <div class="connctMain">
+                        <div class="row">
+                            <div class="col-md-6 col-12">
+                                <div class="contcData">
+                                    <img class="img-fluid"
+                                        src="https://static-exp2.licdn.com/aero-v1/sc/h/b1fxwht7hdbeusleja7ciftsj" />
+                                    <div class="cntcText">
+                                        <p>Connect with people who can help
+                                        </p>
+                                        <button>Find People You Know</button>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-12">
-                        <div class="contcData">
-                            <img class="img-fluid"
-                                src="https://static-exp2.licdn.com/aero-v1/sc/h/dkfub4sc7jgzg3o31flfr91rv" />
-                            <div class="cntcText">
-                                <p>Learn the skills you need to succeed need help
-                                </p>
-                                <button class="selectcnt">Choose a topic to learn about</button>
+                            <div class="col-md-6 col-12">
+                                <div class="contcData">
+                                    <img class="img-fluid"
+                                        src="https://static-exp2.licdn.com/aero-v1/sc/h/dkfub4sc7jgzg3o31flfr91rv" />
+                                    <div class="cntcText">
+                                        <p>Learn the skills you need to succeed need help
+                                        </p>
+                                        <button class="selectcnt">Choose a topic to learn about</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <section class="p-relative min-height">
-        <div class="container">
-            <div class="movieBlock">
-                <div class="row">
-                    <div class="col-md-5 col-12">
-                        <div class="vidBlock">
-                            <iframe height="315" src="https://www.youtube.com/embed/qbjyqxOzNn8"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <div class="col-md-7 col-12">
-                        <div class="moviText">
-                            <p>In it to chase my dream </p>
+            <section class="p-relative min-height">
+                <div class="container">
+                    <div class="movieBlock">
+                        <div class="row">
+                            <div class="col-md-5 col-12">
+                                <div class="vidBlock">
+                                    <iframe height="315" src="https://www.youtube.com/embed/qbjyqxOzNn8"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="col-md-7 col-12">
+                                <div class="moviText">
+                                    <p>In it to chase my dream </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <footer>
-        <div class="container">
-            <div class="footPart">
-                <div class="logoFoot">
-                    <img class="img-fluid" src="https://staging.getkeel.com/assets/images/common/keelIcon.svg" />
-                </div>
-                <div class="footRight">
-                    <div class="row">
-                        <div class="col-md-3 col-12">
-                            <div class="listFoot">
-                                <h4>Heading</h4>
-                                <ul>
-                                    <li>List Data</li>
-                                    <li>List Data</li>
-                                    <li>List Data</li>
-                                    <li>List Data</li>
-                                    <li>List Data</li>
-                                    <li>List Data</li>
-                                    <li>List Data</li>
-                                </ul>
-                            </div>
+            <footer>
+                <div class="container">
+                    <div class="footPart">
+                        <div class="logoFoot">
+                            <img class="img-fluid" src="https://staging.getkeel.com/assets/images/common/keelIcon.svg" />
                         </div>
-                        <div class="col-md-3 col-12">
-                            <div class="listFoot">
-                                <h4>Heading</h4>
-                                <ul>
-                                    <li>List Data</li>
-                                    <li>Data List Data</li>
-                                    <li>Data List Data</li>
-                                    <li>List Data</li>
-                                    <li>Data List Data</li>
-                                    <li>List Data</li>
-                                    <li>List Data</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-12">
-                            <div class="listFoot">
-                                <h4>Heading</h4>
-                                <ul>
-                                    <li>List Data Data</li>
-                                    <li>List Data Data</li>
-                                    <li>List Data Data</li>
-                                    <li>List Data</li>
-                                    <li>List Data</li>
-                                    <li>List Data Data</li>
-                                    <li>List Data</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-12">
-                            <div class="listFoot">
-                                <h4>Heading</h4>
-                                <ul>
-                                    <li>List Data</li>
-                                    <li>List Data DataData</li>
-                                    <li>List Data</li>
-                                    <li>List Data DataData</li>
-                                    <li>List Data DataData</li>
-                                    <li>List Data</li>
-                                    <li>List Data</li>
-                                </ul>
+                        <div class="footRight">
+                            <div class="row">
+                                <div class="col-md-3 col-12">
+                                    <div class="listFoot">
+                                        <h4>Heading</h4>
+                                        <ul>
+                                            <li>List Data</li>
+                                            <li>List Data</li>
+                                            <li>List Data</li>
+                                            <li>List Data</li>
+                                            <li>List Data</li>
+                                            <li>List Data</li>
+                                            <li>List Data</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-12">
+                                    <div class="listFoot">
+                                        <h4>Heading</h4>
+                                        <ul>
+                                            <li>List Data</li>
+                                            <li>Data List Data</li>
+                                            <li>Data List Data</li>
+                                            <li>List Data</li>
+                                            <li>Data List Data</li>
+                                            <li>List Data</li>
+                                            <li>List Data</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-12">
+                                    <div class="listFoot">
+                                        <h4>Heading</h4>
+                                        <ul>
+                                            <li>List Data Data</li>
+                                            <li>List Data Data</li>
+                                            <li>List Data Data</li>
+                                            <li>List Data</li>
+                                            <li>List Data</li>
+                                            <li>List Data Data</li>
+                                            <li>List Data</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-12">
+                                    <div class="listFoot">
+                                        <h4>Heading</h4>
+                                        <ul>
+                                            <li>List Data</li>
+                                            <li>List Data DataData</li>
+                                            <li>List Data</li>
+                                            <li>List Data DataData</li>
+                                            <li>List Data DataData</li>
+                                            <li>List Data</li>
+                                            <li>List Data</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </footer>
+                <div className='subFooter'>
+                    <div className='container'>
+                        <ul>
+                            <li>
+                                <img class="img-fluid" src="https://staging.getkeel.com/assets/images/common/keelIcon.svg" />
+                            </li>
+                            <li>
+                                <p>About</p>
+                            </li>
+                            <li>
+                                <p>Accessibility</p>
+                            </li>
+                            <li><p>Privacy Policy</p></li>
+                            <li><p>Connect</p></li>
+                            <li><p>Blog</p></li>
+                            <li><p>Community</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
 
         </>
     )

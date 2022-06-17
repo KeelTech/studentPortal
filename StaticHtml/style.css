@@ -233,10 +233,10 @@ p,span{
 }
 @media (min-width: 1920px) {
   .container-fluid {
-    max-width: 80%;
+    max-width: 1128px;
   }
   .container {
-    max-width: 80%;
+    max-width: 1128px;
   }
 }
 
