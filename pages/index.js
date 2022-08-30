@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import STORAGE from '@/helpers/storage/storage.js';
 import NonLoginHomeView from '@/components/NonLoginHomeView';
+import LoginHomeView from '@/components/HomeView';
 import { getServerCookie } from '@/helpers/utils.js';
 
 const HomeView = ({ data })=>{
@@ -14,7 +15,7 @@ const HomeView = ({ data })=>{
     }
 
     return <>
-        {!showLoginView?<NonLoginHomeView afterLoginRedirection={afterLoginRedirection}/>:<p>Home Page</p>}
+        {!showLoginView?<NonLoginHomeView afterLoginRedirection={afterLoginRedirection}/>:<LoginHomeView/>}
     </>
 }
 
