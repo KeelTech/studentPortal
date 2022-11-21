@@ -1,0 +1,457 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+*,
+*::after,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body,
+html {
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+  color: #242424;
+}
+button {
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+.align-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+ul{
+    list-style: none;
+    li{
+        list-style: none;
+    }
+}
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #848484;
+  border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.justify-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.p-relative {
+  position: relative !important;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left !important;
+}
+.text-center {
+  text-align: center !important;
+}
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1370px;
+  }
+}
+@media (min-width: 1400px) and (min-width: 1920px) {
+  .container {
+    max-width: 1600px;
+  }
+}
+
+
+header {
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    z-index: 1;
+}
+
+.navBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 60px;
+}
+
+.navBar a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.navSubList {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+ul.subListItems {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.notiFiy {
+    background: #F4F4F4;
+    height: 46px;
+    width: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.usrLog {
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+}
+
+ul.subListItems li p {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.studentMainContainer {
+    margin-top: 30px;
+    display: flex;
+    gap: 40px;
+}
+
+.userNameDeatils {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.userNameDeatils img {
+    width: 58px;
+    height: 58px;
+}
+
+.ursName h3 {
+    font-size: 30px;
+    font-weight: 200;
+}
+
+.ursName span {
+    letter-spacing: 0.35em;
+font-size: 12px;
+color: #868686;
+text-transform: uppercase;
+}
+
+ul.userSkillsDeatils {
+    margin-top: 30px;
+}
+
+ul.userSkillsDeatils li p {
+    font-size: 11px;
+    color: #868686;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.personalDetails {
+    margin: 20px 0;
+}
+
+.personalDetails h4 {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.28em;
+    color: #242424;
+    position: relative;
+    isolation: isolate;
+    span{
+        background: white;
+        padding-right: 5px;
+    }
+}
+.socialImg{
+    button{
+        height: 30px;
+        width: 30px;
+        padding: 0 !important;
+    }
+}
+.personalDetails h4:before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #D9D9D9;
+    position: absolute;
+    top: 7px;
+    z-index: -1;
+}
+
+.buttonGrids {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.buttonGrids button {
+    background: #6572E8;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    padding: 5px 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+}
+
+.skillsRatings {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.skillsGrid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.skillsGrid span {
+    background: #F0F1FA;
+    border-radius: 4px;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    color:  #545454;
+    letter-spacing: 0.05em;
+}
+
+.stdDetlsTabs {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.stdDetlsTabs button {background: #F0F1FA;color: #4F4F4F;font-size: 16px;padding: 2px 14px;border: 1px solid transparent;border-radius: 4px;}
+
+.stdDetlsTabs button:hover {
+    border-color: #8189D5;
+}
+
+.studentsStepSection {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+}
+
+.stdSetp {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    isolation: isolate;
+}
+
+.stepSideBar {
+    height: 54px;
+    width: 54px;
+    background: #FCFDFE;
+    box-shadow: 0px 4px 4px #5379ff36;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    flex-shrink: 0;
+}
+
+.grdStpData {
+    background: rgba(247, 248, 252, 0.33);
+    box-shadow: 0px 4px 10px rgba(39, 102, 197, 0.15);
+    border-radius: 12px;
+    display: flex;
+    gap: 20px;
+    padding: 14px;
+    align-items: self-start;
+}
+
+.grdStpData img {
+    flex-shrink: 0;
+}
+
+.stdSepDtls h3 {
+    color: #242424;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.stdSepDtls span {
+    color: #BEBDBD;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: 1px;
+    display: block;
+}
+
+.stdSepDtls p {
+    letter-spacing: 1px;
+    color: #6C6C6C;
+    font-size: 11px;
+    font-weight: 400;
+    margin-top: 6px;
+}
+
+.stepSideBar:before {
+    content: '';
+    width: 4px;
+    height: calc(100% + 42px);
+    top: 0px;
+    background: #F0F3FF;
+    position: absolute;
+    z-index: -1;
+}
+
+.stdSetp:last-child .stepSideBar:before {
+    display: none;
+}
+h4.achHdng {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+h4.achHdng {
+}
+
+p.achSubHdng {
+    color: #6C6C6C;
+    font-size: 11px;
+}
+
+.listAch {
+    margin-top: 35px;
+}
+
+.listAch h5 {
+    color: #4F4F4F;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.achCard {
+    margin-bottom: 30px;
+}
+
+.achImg {
+    display: flex;
+    align-items: start;
+    gap: 5px;
+}
+
+.achData h3 {
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.achData p {
+    color: #6C6C6C;
+    font-size: 9px;
+}
+
+.achData img {
+    margin-top: 10px;
+}
+.studentLeft {
+    width: 100%;
+    max-width: 330px;
+}
+
+.studentRight {
+    width: 100%;
+    max-width: 280px;
+}
+
+
+@media (max-width:1420px) {
+    .stdDetlsTabs {
+        flex-wrap: wrap;
+    }
+    .stdDetlsTabs button {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width:992px) {
+.studentMainContainer {
+    flex-wrap: wrap;
+}
+
+.studentLeft {
+    max-width: unset;
+}
+
+.studentRight {
+    max-width: unset;
+}
+ul.subListItems{
+    display: none;
+}
+
+.grdStpData {
+    flex-wrap: wrap;
+}
+
+.stepSideBar {
+    width: 30px;
+    height: 30px;
+}
+}
